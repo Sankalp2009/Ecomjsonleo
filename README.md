@@ -16,6 +16,7 @@
 * Handling Persistent Pagination Feature from URL
 * Handling Persistent Sorting Feature from URL
 * Handling Persistent Filter Feature from URL
-##How to Run
+
+## How to Run
 * npm run start
 * npm run dev
