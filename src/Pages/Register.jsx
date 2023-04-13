@@ -32,7 +32,6 @@ function Register() {
       {
         localStorage.setItem("cred",JSON.stringify(formState))
         Nav('/login');
-        window.location.reload();
       }else{
         alert("Fill the Credentials Before submitting!");
       }

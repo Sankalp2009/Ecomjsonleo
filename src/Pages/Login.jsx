@@ -21,7 +21,7 @@ const InitialStates = {
 function Login() {
 
  const [formState, setFormState] = React.useState(InitialStates);
-  const {login} = React.useContext(GlobalInfo); 
+  const { login } = React.useContext(GlobalInfo); 
    const Nav = useNavigate()
   const handleChange = (e)=>{
      const {name} = e.target
@@ -30,16 +30,23 @@ function Login() {
       [name] : e.target.value
      }})
   } 
+  let UserCred;
+    try {
+      UserCred = JSON.parse(localStorage.getItem('cred')) || "";
+    } catch (error) {
+      console.log(error);
+    }  
+    console.log(`Auth`,UserCred);
   const {email,password} = formState
- 
  const handleSubmit = (event)=>{
     event.preventDefault();
-    if(email&&password)
+    if(UserCred.email === email && UserCred.password === password) 
     {
-      login(email,password);
+      login("Di6WBJ5Pqbv1KV6PE2d6xWPRWylQiTRc");
       Nav('/dash');
-    }else{
-      alert("Fill the Credentials Before submitting!");
+    }
+    else{
+      alert("Please Register...");
     }
     setFormState(InitialStates);
  }

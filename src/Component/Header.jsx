@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../App.css'
+import {useNavigate} from 'react-router-dom'
 import {
   Button,
 } from '@chakra-ui/react'
@@ -8,7 +9,11 @@ import {GlobalInfo} from '.././Context/AuthContext'
 function Header() 
 {
  const {authState,Logout} = React.useContext(GlobalInfo);
- console.log(authState)
+     const nav = useNavigate()
+   const handleClick = ()=>{
+      Logout()
+      nav('/');
+   }
   return (
     <>
     {!authState.isAuth ? 
@@ -21,7 +26,7 @@ function Header()
   : 
    (<div className="container">
    <Link to="/">Home</Link>
-   <Button bgColor="black" color="whitesmoke"onClick={Logout}>Logout</Button>
+   <Button bgColor="black" color="whitesmoke"onClick={handleClick}>Logout</Button>
    <Link to="/dash">Dashboard</Link>
  </div>)}
     </>
