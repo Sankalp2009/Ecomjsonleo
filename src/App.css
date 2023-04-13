@@ -1,0 +1,39 @@
+.container{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+  height: 50px;
+  top: 0;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  font-size: larger;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:#0b1120;
+  color:#e0e6ee;
+  z-index: 1;
+}
+.background-image{
+  background-image: url("https://media.istockphoto.com/id/952039286/photo/abstract-background-wallpaper.jpg?b=1&s=170667a&w=0&k=20&c=O42TVdq7QcprHBQS6lrIw_AkF04c3AkyCmtM1ZGJitA=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: auto;
+  color:#e0e6ee;
+  margin: auto;
+}
+#sidebar{
+  padding: 5px;
+  color: blue;
+}
+
+#sidebar:hover{
+  color: orangered !important;
+}
